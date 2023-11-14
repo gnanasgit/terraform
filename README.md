@@ -1,3 +1,4 @@
 # terraform
 ##terraform-aws
-##terraform-azur qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqe
+##terraform-azure
+##terraform-cli
