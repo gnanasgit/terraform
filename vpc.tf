@@ -31,3 +31,14 @@ resource "aws_subnet" "tf-ecomm-pvt-sn-A" {
   }
 }
 
+#Create private subnet - AZ - B
+resource "aws_subnet" "tf-ecomm-pvt-sn-B" {
+  vpc_id     = aws_vpc.tf-ecomm.id
+  cidr_block = "192.168.3.0/24"
+  availability_zone = "us-east-2b"
+  map_public_ip_on_launch = "false"
+  tags = {
+    Name = "ecomm-private-subnet-B"
+  }
+}
+
