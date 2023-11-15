@@ -74,3 +74,13 @@ resource "aws_route_table" "tf-ecomm-pub-rt" {
     Name = "ecomm-public-route-table"
   }
 }
+
+#Create private route table
+resource "aws_route_table" "tf-ecomm-pvt-rt" {
+  vpc_id = aws_vpc.tf-ecomm.id
+
+  tags = {
+    Name = "ecomm-private-route-table"
+  }
+}
+
