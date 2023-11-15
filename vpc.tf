@@ -30,9 +30,6 @@ map_public_ip_on_launch = "true"
   }
 }
 
-
-
-
 #Create private subnet - AZ - A
 resource "aws_subnet" "tf-ecomm-pvt-sn-A" {
   vpc_id     = aws_vpc.tf-ecomm.id
@@ -55,3 +52,11 @@ resource "aws_subnet" "tf-ecomm-pvt-sn-B" {
   }
 }
 
+#Create aws internet gateway
+resource "aws_internet_gateway" "tf-ecomm-igw" {
+  vpc_id = aws_vpc.tf-ecomm.id
+
+  tags = {
+    Name = "ecomm-internet-gateway"
+  }
+}
